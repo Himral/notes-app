@@ -1,6 +1,6 @@
 import Note from "./Note.jsx"
 import AddNotes from "./addNotes.jsx";
-const NotesList =({notes})=>
+const NotesList =({notes, handleAddNote})=>
 {
     return(
        <div className = "NotesList">
@@ -11,7 +11,7 @@ const NotesList =({notes})=>
         date = {note.date}
         />)
        )}
-       <AddNotes/>
+       <AddNotes handleAddNote = {handleAddNote}/>
        </div>
     )
 }

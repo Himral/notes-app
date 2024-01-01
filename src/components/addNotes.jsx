@@ -1,13 +1,19 @@
 import { useState } from "react";
 
-const AddNotes =() =>{
+const AddNotes =({handleAddNote}) =>{
     const [noteText,setNoteText] = useState('');
     const handleChange=(event)=>{
         setNoteText(event.target.value);
     };
 
     const handleSaveClick = () =>{
-        
+        if(noteText.trim().length > 0){
+             handleAddNote(noteText);
+             setNoteText('');
+        }
+       else{
+        alert("you need to add a valid string to save a note")
+       }
     }
     return(
         
@@ -16,6 +22,7 @@ const AddNotes =() =>{
                 rows = "8"
                 cols = "10"
                 placeholder="Type text to add"
+                value = {noteText}
                 onChange={handleChange}
                 >
 
