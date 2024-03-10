@@ -20,15 +20,7 @@ function App() {
     date : getDate()
   },{
     id : nanoid(),
-    text: "This is my first note",
-    date : getDate()
-  },{
-    id : nanoid(),
-    text: "This is my first note",
-    date : getDate()
-  },{
-    id : nanoid(),
-    text: "Tnote",
+    text: "This is my Second note",
     date : getDate()
   }]);
 const [searchText, setSearchText] = useState('');
